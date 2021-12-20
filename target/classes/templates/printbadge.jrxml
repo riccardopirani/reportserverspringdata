@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="printcantiere" pageWidth="500" pageHeight="300" columnWidth="460" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ade02660-aa6c-4fe1-86f3-7fbed4639bb1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="DatasetTable" uuid="6f669aea-71da-44c6-85d1-b9ce302d035b">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="Tipo" class="java.lang.String"/>
+		<field name="data" class="java.lang.String"/>
+		<field name="GG" class="java.lang.String"/>
+		<field name="NR" class="java.lang.String"/>
+		<field name="Articolo" class="java.lang.String"/>
+		<field name="Descrizione" class="java.lang.String"/>
+		<field name="Quantita" class="java.lang.String"/>
+		<field name="Prezzo" class="java.lang.String"/>
+		<field name="Totale" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="ItemDataset" uuid="21ab5a98-f7e2-4c98-ac19-df11dca7deef">
+		<parameter name="Tipo" class="java.lang.String"/>
+		<parameter name="data" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<subDataset name="ItemDataSet" uuid="596eae4f-2e12-421a-bfe8-6634453e89f9">
+		<parameter name="ItemDataSource" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{ItemDataSource}]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="data" class="java.lang.String"/>
+		<field name="tipo" class="java.lang.String"/>
+		<field name="gg" class="java.lang.String"/>
+		<field name="articolo" class="java.lang.String"/>
+		<field name="descrizione" class="java.lang.String"/>
+		<field name="quantita" class="java.lang.String"/>
+		<field name="prezzo" class="java.lang.String"/>
+		<field name="totale" class="java.lang.String"/>
+		<field name="nr" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="DatasetRiepilogo" uuid="914dfead-fe50-492f-a84c-9d9804aafa68">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="Stato" class="java.lang.String">
+		<parameterDescription><![CDATA[NRIMPIANTO]]></parameterDescription>
+	</parameter>
+	<parameter name="CollectionBeanParameter" class="java.lang.String"/>
+	<parameter name="DataSourceTable" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ItemDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="TotaleOreRisorsa" class="java.lang.String"/>
+	<parameter name="TotaleRisorse" class="java.lang.String"/>
+	<parameter name="TotaleArticoli" class="java.lang.String"/>
+	<parameter name="TotaleSpese" class="java.lang.String"/>
+	<parameter name="TotaleRistoranti" class="java.lang.String"/>
+	<parameter name="TotaleDirittoChiamata" class="java.lang.String"/>
+	<parameter name="TotaleKilometri" class="java.lang.String"/>
+	<parameter name="TotaleNoleggi" class="java.lang.String"/>
+	<parameter name="TotaleCantiere" class="java.lang.String"/>
+	<parameter name="NRIMPIANTO" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="ItemDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="130" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="0" y="0" width="320" height="110" uuid="5ba1e18a-d7f2-496d-9b7a-782c64d61fc2"/>
+				<imageExpression><![CDATA["/Users/riccardo/Desktop/logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="150" splitType="Prevent">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<property name="com.jaspersoft.studio.layout"/>
+			<staticText>
+				<reportElement x="10" y="110" width="120" height="19" uuid="62b5c881-c97f-4eb2-a35b-9bfc26909278"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Impianto NR:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="110" width="130" height="19" uuid="8f9e51ae-dc41-4ee0-a656-bc3a83d4b042"/>
+				<textFieldExpression><![CDATA[$P{NRIMPIANTO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

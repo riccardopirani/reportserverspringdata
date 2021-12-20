@@ -1,0 +1,7 @@
+com.reportserver.report
+com.reportserver.report.enums
+com.reportserver.report.model
+com.reportserver.report.repository
+com.reportserver.report.resources
+com.reportserver.report.services
+com.reportserver.report.utils

@@ -7,9 +7,17 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
+/**
+ * Repo Articolo Cantiere
+ */
 public interface ArticoloCantiereRepository extends JpaRepository<ArticoloCantiere, Integer> {
 
-    //All the articles present on site are loaded
+    /**
+     * Caricamento articoli cantiere
+     *
+     * @param IdCantiere
+     * @return
+     */
     @Query("FROM ArticoloCantiere where IdCantiere=:IdCantiere")
     List<ArticoloCantiere> findbycantiere(@Param("IdCantiere") int IdCantiere);
 }

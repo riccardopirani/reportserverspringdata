@@ -1,0 +1,2385 @@
+{
+  "info": {
+    "_postman_id": "ced06d33-5b81-4b04-af9a-285368107d97",
+    "name": "Quote",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Fornitori",
+      "item": [
+        {
+          "name": "Caricamento fornitori",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://cloud.centoimpianti.com:8989/articolo/caricafornitori",
+              "protocol": "http",
+              "host": [
+                "cloud",
+                "centoimpianti",
+                "com"
+              ],
+              "port": "8989",
+              "path": [
+                "articolo",
+                "caricafornitori"
+              ]
+            },
+            "description": "Router che effettua il caricamento dei fornitori"
+          },
+          "response": [
+            {
+              "name": "Caricamento fornitori",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8989/articolo/caricafornitori",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8989",
+                  "path": [
+                    "articolo",
+                    "caricafornitori"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"3a34-Gze8tXdbi4mM4NIq1b98JmkwJac\""
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Jul 2021 09:46:28 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"IdFornitore\": 1,\n        \"Nome\": \"Cento Impianti S.r.l.\",\n        \"Email\": \"info@centoimpianti.com\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 2,\n        \"Nome\": \"Morselli Impianti srl\",\n        \"Email\": \"giuseppe.balboni@morsellimpianti.com\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 3,\n        \"Nome\": \"Ruini Marco\",\n        \"Email\": \"info@ruinimarco.it\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Paolo Borsellino, 11\",\n        \"Provincia\": \"RE\",\n        \"Citta\": \"Arceto\",\n        \"CAP\": \"42019\",\n        \"Telefono\": \"0522989355\",\n        \"PartitaIVA\": \"01848420350\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 4,\n        \"Nome\": \"Comet S.p.a.\",\n        \"Email\": \"sangiovanni.commerciale@gruppocomet.it\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Ferdinando Magellano\",\n        \"Provincia\": \"BO\",\n        \"Citta\": \"San Giovanni in Persiceto\",\n        \"CAP\": \"40017\",\n        \"Telefono\": \"0516870685\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 5,\n        \"Nome\": \"Veronesi S.r.l.\",\n        \"Email\": \"veronesi.mario@veronesisrl.comt\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 6,\n        \"Nome\": \"Cediss\",\n        \"Email\": \"segreteria@cediss.com\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Tosarelli, 157\",\n        \"Provincia\": \"BO\",\n        \"Citta\": \"Villanova di Castenaso\",\n        \"CAP\": \"40055\",\n        \"Telefono\": \"051450773\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"051454513\"\n    },\n    {\n        \"IdFornitore\": 7,\n        \"Nome\": \"Sicurtec Romagna\",\n        \"Email\": \"tecnico@sicurtecromagna.it\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Caduti del Lavoro 21\",\n        \"Provincia\": \"RA\",\n        \"Citta\": \"Bagnacavallo\",\n        \"CAP\": \"48012\",\n        \"Telefono\": \"054562006\",\n        \"PartitaIVA\": \"02259810394\",\n        \"CodiceFiscale\": \"02259810394\",\n        \"Fax\": \"054569671\"\n    },\n    {\n        \"IdFornitore\": 8,\n        \"Nome\": \"Futurtec\",\n        \"Email\": \"g.natale@futurtec.it\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 9,\n        \"Nome\": \"Vecchi Franco\",\n        \"Email\": \"gigi@braveheartlive.com\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 10,\n        \"Nome\": \"Pirani Luminarie\",\n        \"Email\": \"andrea@pirani.it\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 11,\n        \"Nome\": \"Ferioli Trasporti\",\n        \"Email\": \"info@feriolitrasporti.it\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Dodici Morelli\",\n        \"Provincia\": \"FE\",\n        \"Citta\": \"Dodici Morelli\",\n        \"CAP\": \"44045\",\n        \"Telefono\": \"0516841094\",\n        \"PartitaIVA\": \"FE\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 12,\n        \"Nome\": \"IT Answer\",\n        \"Email\": \"giacomo@itananswer.eu\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 13,\n        \"Nome\": \"LS Cabling\",\n        \"Email\": \"ls@ls.com\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 15,\n        \"Nome\": \"Electronics Time\",\n        \"Email\": \"francotursi@electronicstime.it\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 16,\n        \"Nome\": \"ksenia\",\n        \"Email\": \"assistenza@kseniasecurity.com\",\n        \"Sconto1\": 45,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 17,\n        \"Nome\": \"Scuola Stage\",\n        \"Email\": \"taddia@itis.it\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 18,\n        \"Nome\": \"Ergo Design & Technology GmbH/srl\",\n        \"Email\": \"roland.stockner@ergosolution.it\",\n        \"Sconto1\": 40,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"via del Sole, 34\",\n        \"Provincia\": \"Bolzano\",\n        \"Citta\": \"Ardiano\",\n        \"CAP\": \"39010\",\n        \"Telefono\": \"0471510310\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 19,\n        \"Nome\": \"Cias\",\n        \"Email\": \"assistenza@cias.it\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 20,\n        \"Nome\": \"Emmegi Ricambi\",\n        \"Email\": \"info@emmegiricambi.it\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 21,\n        \"Nome\": \"Bosch antintrusione\",\n        \"Email\": \"info@bosch.com\",\n        \"Sconto1\": 45,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 22,\n        \"Nome\": \"Bosch telecamere\",\n        \"Email\": \"info@bosch.com\",\n        \"Sconto1\": 28,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 23,\n        \"Nome\": \"Bosch antincendio\",\n        \"Email\": \"info@bosch.com\",\n        \"Sconto1\": 35,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 25,\n        \"Nome\": \"Skilleye\",\n        \"Email\": \"telecamere@aasset.com\",\n        \"Sconto1\": 45,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 26,\n        \"Nome\": \"Allarm Italia\",\n        \"Email\": \"info@allarmitalia.com\",\n        \"Sconto1\": 45,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 28,\n        \"Nome\": \"Baywa Pannelli\",\n        \"Email\": \"info.solarsystems@baywa-re.iy\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 29,\n        \"Nome\": \"Baywa Inverter\",\n        \"Email\": \"info.solarsystems@baywa-re.it\",\n        \"Sconto1\": 20,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 30,\n        \"Nome\": \"Riello\",\n        \"Email\": \"riello@riello-ups.com\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": null,\n        \"Provincia\": null,\n        \"Citta\": null,\n        \"CAP\": null,\n        \"Telefono\": null,\n        \"PartitaIVA\": null,\n        \"CodiceFiscale\": null,\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 31,\n        \"Nome\": \"Domotica Labs\",\n        \"Email\": \"info@domoticalabs.it\",\n        \"Sconto1\": 30,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Pietragalletto, 18\",\n        \"Provincia\": \"CN\",\n        \"Citta\": \"Fossano\",\n        \"CAP\": \"12045\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"CN\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 32,\n        \"Nome\": \"Fabbi Imola\",\n        \"Email\": \"info@fabbiimola.com\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Varoni 4\",\n        \"Provincia\": \"Bo\",\n        \"Citta\": \"IMOLA\",\n        \"CAP\": \"44026\",\n        \"Telefono\": \"0542 641999\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 33,\n        \"Nome\": \"Bosch audio\",\n        \"Email\": \"info@bosch.com\",\n        \"Sconto1\": 25,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"c\",\n        \"Provincia\": \"FE\",\n        \"Citta\": \"c\",\n        \"CAP\": \"c\",\n        \"Telefono\": \"0\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 34,\n        \"Nome\": \"Tecnoimpianti Buongiorno\",\n        \"Email\": \"ostuni@ostuni.it\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Dell'edilizia 4\",\n        \"Provincia\": \"BR\",\n        \"Citta\": \"Ostuni\",\n        \"CAP\": \"72017\",\n        \"Telefono\": \"0002222222\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 35,\n        \"Nome\": \"Politec\",\n        \"Email\": \"info@politec.it\",\n        \"Sconto1\": 45,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"dddd\",\n        \"Provincia\": \"PO\",\n        \"Citta\": \"politec\",\n        \"CAP\": \"22222\",\n        \"Telefono\": \"051857523\",\n        \"PartitaIVA\": \"01560145382\",\n        \"CodiceFiscale\": \"01560145382\",\n        \"Fax\": \"0510578785\"\n    },\n    {\n        \"IdFornitore\": 36,\n        \"Nome\": \"Duevi\",\n        \"Email\": \"info@duevi.eu\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Bard 12/A\",\n        \"Provincia\": \"TO\",\n        \"Citta\": \"Torino\",\n        \"CAP\": \"10142\",\n        \"Telefono\": \"0117701428\",\n        \"PartitaIVA\": \"09399890012\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"0117701429\"\n    },\n    {\n        \"IdFornitore\": 38,\n        \"Nome\": \"Nextmedia S.r.l.\",\n        \"Email\": \"\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Quinto Bucci, 80\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"0547385611\",\n        \"PartitaIVA\": \"03152330407\",\n        \"CodiceFiscale\": \"03152330407\",\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 39,\n        \"Nome\": \"IC Intracom\",\n        \"Email\": \"\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Viale Europa, 33\",\n        \"Provincia\": \"PN\",\n        \"Citta\": \"Sacile\",\n        \"CAP\": \"33077\",\n        \"Telefono\": \"0434735573\",\n        \"PartitaIVA\": \"PN\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 40,\n        \"Nome\": \"Newmeg S.r.l.s\",\n        \"Email\": \"\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Bondenese 85\",\n        \"Provincia\": \"FE\",\n        \"Citta\": \"Buonacompra\",\n        \"CAP\": \"44041\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 41,\n        \"Nome\": \"Bentel\",\n        \"Email\": \"\",\n        \"Sconto1\": 45,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 42,\n        \"Nome\": \"All Net\",\n        \"Email\": \"\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Fucini, 2\",\n        \"Provincia\": \"BO\",\n        \"Citta\": \"Casalecchio di Reno\",\n        \"CAP\": \"40033\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 43,\n        \"Nome\": \"Proled\",\n        \"Email\": \"\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 44,\n        \"Nome\": \"Lugli e Mari\",\n        \"Email\": \"info@luglimari.it\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Staffette Partigiane 59\",\n        \"Provincia\": \"MO\",\n        \"Citta\": \"Modena\",\n        \"CAP\": \"41122\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 47,\n        \"Nome\": \"DEA security\",\n        \"Email\": \"\",\n        \"Sconto1\": 45,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 48,\n        \"Nome\": \"Bonetti Elettroimpianti\",\n        \"Email\": \"bonetti.giorgio05@libero.it\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Mille 33/1\",\n        \"Provincia\": \"MO\",\n        \"Citta\": \"Massa Finalese\",\n        \"CAP\": \"41035\",\n        \"Telefono\": \"053599327\",\n        \"PartitaIVA\": \"02439590361\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": null\n    },\n    {\n        \"IdFornitore\": 49,\n        \"Nome\": \"Elettroveneta\",\n        \"Email\": \"marco.bianchi@elettroveneta.it\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Francesco Luigi Ferrari, 11\",\n        \"Provincia\": \"FE\",\n        \"Citta\": \"Ferrara\",\n        \"CAP\": \"44122\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 50,\n        \"Nome\": \"TellSystem\",\n        \"Email\": \"a.dantonio@tellsystem.it\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"77 High Street\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"024 792 1148\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 51,\n        \"Nome\": \"Ekinex\",\n        \"Email\": \"info@ekinex.com\",\n        \"Sconto1\": 40,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Novara, 37\",\n        \"Provincia\": \"NO\",\n        \"Citta\": \"VAPRIO D’AGOGNA\",\n        \"CAP\": \"28010\",\n        \"Telefono\": \"03211828980\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 52,\n        \"Nome\": \"Tecnoalarm\",\n        \"Email\": \"\",\n        \"Sconto1\": 40,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 53,\n        \"Nome\": \"prova\",\n        \"Email\": \"\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 54,\n        \"Nome\": \"Argo Elettronica\",\n        \"Email\": \"\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 55,\n        \"Nome\": \"2n\",\n        \"Email\": \"\",\n        \"Sconto1\": 28,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 57,\n        \"Nome\": \"MILESIGHT\",\n        \"Email\": \"\",\n        \"Sconto1\": 50,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 58,\n        \"Nome\": \"Italiana Sensori\",\n        \"Email\": \"\",\n        \"Sconto1\": 40,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 59,\n        \"Nome\": \"Hikvision Termografiche\",\n        \"Email\": \"info@hikvision.com\",\n        \"Sconto1\": 45,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 60,\n        \"Nome\": \"Hikvision Solution\",\n        \"Email\": \"info@hikvision.com\",\n        \"Sconto1\": 40,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 61,\n        \"Nome\": \"Hikvision Pro\",\n        \"Email\": \"info@hikvision.com\",\n        \"Sconto1\": 45,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 62,\n        \"Nome\": \"DPS di mengoli stefania\",\n        \"Email\": \"dpssas.info@gmail.com\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Verdi 31\",\n        \"Provincia\": \"BO\",\n        \"Citta\": \"Anzola Dell'Emilia\",\n        \"CAP\": \"40011\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 63,\n        \"Nome\": \"Hesa spa\",\n        \"Email\": \"\",\n        \"Sconto1\": 50,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 64,\n        \"Nome\": \"TVT\",\n        \"Email\": \"info@tvt.com\",\n        \"Sconto1\": 40,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 65,\n        \"Nome\": \"Tsec\",\n        \"Email\": \"info@tsec.it\",\n        \"Sconto1\": 25,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 66,\n        \"Nome\": \"AVOTEC\",\n        \"Email\": \"info@avotec.it\",\n        \"Sconto1\": 40,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 67,\n        \"Nome\": \"Lazzari e Sammaranitani\",\n        \"Email\": \"ricambi@lazzariesammaritani.it\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"Via Della Canapa 15\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"44042\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 68,\n        \"Nome\": \"Bosch Storage\",\n        \"Email\": \"\",\n        \"Sconto1\": 30,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 69,\n        \"Nome\": \"AVS\",\n        \"Email\": \"\",\n        \"Sconto1\": 38,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 70,\n        \"Nome\": \"Elmo\",\n        \"Email\": \"elmo@elmo.it\",\n        \"Sconto1\": 40,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    },\n    {\n        \"IdFornitore\": 71,\n        \"Nome\": \"4Box\",\n        \"Email\": \"\",\n        \"Sconto1\": 0,\n        \"Sconto2\": 0,\n        \"Sconto3\": 0,\n        \"Indirizzo\": \"\",\n        \"Provincia\": \"\",\n        \"Citta\": \"\",\n        \"CAP\": \"\",\n        \"Telefono\": \"\",\n        \"PartitaIVA\": \"\",\n        \"CodiceFiscale\": \"\",\n        \"Fax\": \"\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Caricamento articoli dentro cantiere",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            },
+            "description": "Caricamento articoli presenti all'interno di un cantiere"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rapportini",
+      "item": [
+        {
+          "name": "inserimento documento dentro rapportino",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "IdRapporto",
+                  "value": "2",
+                  "description": "Numero del documento",
+                  "type": "text"
+                },
+                {
+                  "key": "FilePDf",
+                  "value": "base64 documento",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8989/rapportini/elimina",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "rapportini",
+                "elimina"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Caricamento articoli rapportini",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            },
+            "description": "Caricamento articoli presenti dentro un rapportino"
+          },
+          "response": []
+        },
+        {
+          "name": "Ricerca Rapportini",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Cantieri",
+      "item": [
+        {
+          "name": "Caricamento articoli presenti dentro cantiere",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"IdCantiere\": 2659\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://cloud.centoimpianti:8989/articolo/caricaarticolicantiere",
+              "protocol": "http",
+              "host": [
+                "cloud",
+                "centoimpianti"
+              ],
+              "port": "8989",
+              "path": [
+                "articolo",
+                "caricaarticolicantiere"
+              ],
+              "query": [
+                {
+                  "key": "IdCantiere ",
+                  "value": "23",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "Caricamento articoli presenti dentro cantiere\n"
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminazione articolo cantiere",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            },
+            "description": "Se l'articolo viene eliminato correttamente ritorna true altrmenti false"
+          },
+          "response": []
+        },
+        {
+          "name": "Ricerca Cantieri",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "NomeCantiere",
+                  "value": "sintex",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8989/cantieri/ricerca",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "cantieri",
+                "ricerca"
+              ]
+            },
+            "description": "Permette la ricerca dei cantieri"
+          },
+          "response": []
+        },
+        {
+          "name": "Statistiche",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "Stato",
+                  "value": "InCorso",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8989/cantieri/statistiche?Stato=InCorso",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "cantieri",
+                "statistiche"
+              ],
+              "query": [
+                {
+                  "key": "Stato",
+                  "value": "InCorso"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Ricerca Cliente",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Caricamento risorse umane",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Caricamento cantieri con preventivo agganciato",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Articoli",
+      "item": [
+        {
+          "name": "Ricerca articoli",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "IdArticolo",
+                  "value": "2",
+                  "description": "id articolo da ricercare",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "CodArt",
+                  "value": "v71303",
+                  "description": "codart da ricercare",
+                  "type": "text"
+                },
+                {
+                  "key": "CodEAN",
+                  "value": "2929201",
+                  "description": "Codice barcode \n",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "Descrizione",
+                  "value": "a",
+                  "description": "descrizione articolo",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8989/articolo/ricerca",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "articolo",
+                "ricerca"
+              ]
+            },
+            "description": "I campi non sono obbligatori quindi potrebbe essere compilato per esempio il codice articolo e non la descrizione"
+          },
+          "response": [
+            {
+              "name": "Ricerca articoli",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "key": "IdArticolo",
+                      "value": "2",
+                      "description": "id articolo da ricercare",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "CodArt",
+                      "value": "v71303",
+                      "description": "codart da ricercare",
+                      "type": "text"
+                    },
+                    {
+                      "key": "CodEAN",
+                      "value": "2929201",
+                      "description": "Codice barcode \n",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "Descrizione",
+                      "value": "a",
+                      "description": "descrizione articolo",
+                      "type": "text",
+                      "disabled": true
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://localhost:8989/articolo/ricerca",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8989",
+                  "path": [
+                    "articolo",
+                    "ricerca"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "885"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"375-DcBGcifGKEyP2QJZ8QoL65150QA\""
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Jul 2021 09:46:03 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"IdArticolo\": 265868,\n        \"CodArt\": \"V71303\",\n        \"UM\": \"NR\",\n        \"FamigliaDiSconto\": null,\n        \"Descrizione\": \"SCAT INC RET 3 MOD\",\n        \"Prezzo\": \"0.23\",\n        \"PrezzoListino\": \"0.3582\",\n        \"CodMarca\": \"VIA\",\n        \"CodiceValuta\": \"null\",\n        \"Fornitore\": \"COMET\",\n        \"Importato\": \"COMET\",\n        \"DataAggiornamento\": \"12-07-2021\"\n    },\n    {\n        \"IdArticolo\": 633622,\n        \"CodArt\": \"V71303          \",\n        \"UM\": \"PCE\",\n        \"FamigliaDiSconto\": \"FS01              \",\n        \"Descrizione\": \"Scatola incasso rettang. 3M azzurro        \",\n        \"Prezzo\": \"0.22\",\n        \"PrezzoListino\": \"0.3582\",\n        \"CodMarca\": \"VIW\",\n        \"CodiceValuta\": \"EUR\",\n        \"Fornitore\": \"VIW\",\n        \"Importato\": \"METEL\",\n        \"DataAggiornamento\": \"22-01-2021\"\n    },\n    {\n        \"IdArticolo\": 633623,\n        \"CodArt\": \"V71303.AU       \",\n        \"UM\": \"PCE\",\n        \"FamigliaDiSconto\": \"FS01              \",\n        \"Descrizione\": \"Scatola incasso rettang.autoest. 3M nero   \",\n        \"Prezzo\": \"0.83\",\n        \"PrezzoListino\": \"1.3821\",\n        \"CodMarca\": \"VIW\",\n        \"CodiceValuta\": \"EUR\",\n        \"Fornitore\": \"VIW\",\n        \"Importato\": \"METEL\",\n        \"DataAggiornamento\": \"22-01-2021\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Caricamento tipologie articolo",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            },
+            "description": "Caricamento tipologie degli articoli"
+          },
+          "response": [
+            {
+              "name": "Caricamento tipologie articolo",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8989/tipologia/caricamento",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8989",
+                  "path": [
+                    "tipologia",
+                    "caricamento"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "581"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"245-078puD6gK8tnBieBlsXAx12xNko\""
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Jul 2021 09:45:50 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"IdTipologia\": 1,\n        \"NomeTipologia\": \"Elettrico\"\n    },\n    {\n        \"IdTipologia\": 2,\n        \"NomeTipologia\": \"Antintrusione\"\n    },\n    {\n        \"IdTipologia\": 3,\n        \"NomeTipologia\": \"Bus\"\n    },\n    {\n        \"IdTipologia\": 4,\n        \"NomeTipologia\": \"Telecamere\"\n    },\n    {\n        \"IdTipologia\": 5,\n        \"NomeTipologia\": \"Fotovoltaico\"\n    },\n    {\n        \"IdTipologia\": 6,\n        \"NomeTipologia\": \"Programmazione KNX\"\n    },\n    {\n        \"IdTipologia\": 7,\n        \"NomeTipologia\": \"Vendita\"\n    },\n    {\n        \"IdTipologia\": 9,\n        \"NomeTipologia\": \"Rilevazione Fumo\"\n    },\n    {\n        \"IdTipologia\": 10,\n        \"NomeTipologia\": \"Audio e video\"\n    },\n    {\n        \"IdTipologia\": 11,\n        \"NomeTipologia\": \"Rete Dati\"\n    },\n    {\n        \"IdTipologia\": 13,\n        \"NomeTipologia\": \"Antenne\"\n    },\n    {\n        \"IdTipologia\": 14,\n        \"NomeTipologia\": \"Condizionamento\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Statistiche Articoli",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Nuovo Fornitore",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Nome\": \"prova\",\n    \"Email\": \"prova@gmail.com\",\n    \"Indirizzo\": \"via dodici morelli\",\n    \"Provincia\": \"prova\",\n    \"Citta\": \"Ferrara\",\n    \"CAP\": \"44045\",\n    \"Telefono\": \"051545510\",\n    \"CodiceFiscale\": \"FE54545454\",\n    \"PartitaIVA\": \"323023092309\",\n    \"Fax\": \"4949494\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8989/fornitore/inserimentofornitore",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "fornitore",
+                "inserimentofornitore"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Valida",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"Nome\": \"prova\",\n    \"Email\": \"prova@gmail.com\",\n    \"Indirizzo\": \"via dodici morelli\",\n    \"Provincia\": \"prova\",\n    \"Citta\": \"Ferrara\",\n    \"CAP\": \"44045\",\n    \"Telefono\": \"051545510\",\n    \"CodiceFiscale\": \"FE54545454\",\n    \"PartitaIVA\": \"323023092309\",\n    \"Fax\": \"4949494\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8989/fornitore/inserimentofornitore",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8989",
+                  "path": [
+                    "fornitore",
+                    "inserimentofornitore"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,OPTIONS,POST,PUT"
+                },
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "15"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"f-87GUtLDqjisQ1QRvuBHGXYMbNbc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 02 Mar 2022 06:57:14 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"return\": true\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Preventivi",
+      "item": [
+        {
+          "name": "Statistiche Preventivi",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8989/preventivo/totale/inseriti",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "preventivo",
+                "totale",
+                "inseriti"
+              ]
+            },
+            "description": "Esegue il conteggio dei preventivi inseriti\n"
+          },
+          "response": []
+        },
+        {
+          "name": "Percentuale Preventivi Rifiutati",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8989/preventivo/statistiche/rifiutati",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "preventivo",
+                "statistiche",
+                "rifiutati"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Percentuale Preventivi In Corso",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8989/preventivo/statistiche/incorso",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "preventivo",
+                "statistiche",
+                "incorso"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Percentuale Preventivi Accettati",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8989/preventivo/statistiche/accettati",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "preventivo",
+                "statistiche",
+                "accettati"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Ricerca Preventivi",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8989/preventivo/ricerca",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "preventivo",
+                "ricerca"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "MarcaTempo",
+      "item": [
+        {
+          "name": "caricamento marcature utente",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "IdUtente",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "Data",
+                  "value": "03-02-2021",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://cloud.centoimpianti.com:8989/preventivo/totale/inseriti",
+              "protocol": "http",
+              "host": [
+                "cloud",
+                "centoimpianti",
+                "com"
+              ],
+              "port": "8989",
+              "path": [
+                "preventivo",
+                "totale",
+                "inseriti"
+              ]
+            },
+            "description": "Permette il caricamento delle marcature di un determinato utente"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Utente",
+      "item": [
+        {
+          "name": "Caricamento utenti online",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "http://localhost:8989/utenti/carica/online",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "utenti",
+                "carica",
+                "online"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Carica info utente",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"IdUtente\": 31\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8989/utente/caricavaloriutente",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "utente",
+                "caricavaloriutente"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Caricamento risorse cantiere",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Clienti",
+      "item": [
+        {
+          "name": "Ricerca clienti",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Nuovo cliente",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Caricamento filiali cliente",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Caricamento riferimenti filiale",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"IdCliente\": 7\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8989/cliente/caricariferimenticliente",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "cliente",
+                "caricariferimenticliente"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Caricamento riferimenti filiale",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"IdCliente\": 7\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8989/cliente/caricariferimenticliente",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8989",
+                  "path": [
+                    "cliente",
+                    "caricariferimenticliente"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,OPTIONS,POST,PUT"
+                },
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "216"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"d8-BO1U/+CbA7Ft9AAWwT00QJImpvE\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 01 Mar 2022 12:26:51 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"IdRiferimentoCliente\": 32,\n        \"Filiale\": \"SEDE\",\n        \"Nome\": \"prova\",\n        \"Cognome\": \"prova\",\n        \"Telefono\": \"2929030293\",\n        \"Cellulare\": \"339393901\",\n        \"InvioRapportini\": false,\n        \"IdFilialeCliente\": 0,\n        \"Email\": \"prova@gmail.com\",\n        \"Posizione\": \"CEO\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Inserimento nuovo riferimento",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "IdCliente",
+                  "value": "6",
+                  "description": "Idcliente di prova",
+                  "type": "text"
+                },
+                {
+                  "key": "Citta",
+                  "value": "Milano",
+                  "description": "Citta cliente",
+                  "type": "text"
+                },
+                {
+                  "key": "Via",
+                  "value": "Via dei mille",
+                  "description": "Via del cliente",
+                  "type": "text"
+                },
+                {
+                  "key": "Provincia",
+                  "value": "fE",
+                  "description": "provincia del cliente",
+                  "type": "text"
+                },
+                {
+                  "key": "CAP",
+                  "value": "44045",
+                  "description": "Cap del cliente",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8989/cliente/filiale/inserimento",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "cliente",
+                "filiale",
+                "inserimento"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminazione filiale",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8989/cliente/filiale/elimina",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "cliente",
+                "filiale",
+                "elimina"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Report",
+      "item": [
+        {
+          "name": "Ristoranti in cantiere",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"IdCantiere\": 2872,\n    \"NomeCantiere\": \"prova\",\n    \"Commessa\": \"prova\",\n    \"StatoCantiere\": \"Chiuso\",\n    \"RagioneSociale\": \"prova\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/report/ristoranti/caricamento",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "report",
+                "ristoranti",
+                "caricamento"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Report note impianto",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"IdImpianto\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/report/impianti/note/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "report",
+                "impianti",
+                "note",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Stampa Cantiere Senza Prezzo",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"IdCantiere\": 350,\n    \"NomeCantiere\": \"prova\",\n    \"Commessa\": \"prova\",\n    \"StatoCantiere\": \"Chiuso\",\n    \"RagioneSociale\": \"prova\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/report/cantiere/print/noprice",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "report",
+                "cantiere",
+                "print",
+                "noprice"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Ristoranti in cantiere",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"IdCantiere\": \"2106\",\n    \"NomeCantiere\": \"prova\",\n    \"Commessa\": \"2106/2021\",\n    \"StatoCantiere\": \"Chiuso\",\n    \"RagioneSociale\": \"prova\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8081/api/report/ristoranti/caricamento",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "report",
+                    "ristoranti",
+                    "caricamento"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 26 Aug 2021 13:19:04 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"ragionesociale\": \"Piedigrotta 2\",\n        \"costo\": 14.5,\n        \"datainserimento\": \"2020-02-12\",\n        \"id\": 3249\n    },\n    {\n        \"ragionesociale\": \"La Casseruola\",\n        \"costo\": 21,\n        \"datainserimento\": \"2020-02-18\",\n        \"id\": 3251\n    },\n    {\n        \"ragionesociale\": \"A Mangiare\",\n        \"costo\": 37,\n        \"datainserimento\": \"2020-02-18\",\n        \"id\": 3252\n    },\n    {\n        \"ragionesociale\": \"La Casseruola\",\n        \"costo\": 21,\n        \"datainserimento\": \"2020-02-19\",\n        \"id\": 3253\n    },\n    {\n        \"ragionesociale\": \"Piedigrotta 2\",\n        \"costo\": 28,\n        \"datainserimento\": \"2020-02-25\",\n        \"id\": 3258\n    },\n    {\n        \"ragionesociale\": \"Piedigrotta 2\",\n        \"costo\": 30,\n        \"datainserimento\": \"2020-02-26\",\n        \"id\": 3259\n    },\n    {\n        \"ragionesociale\": \"La Casseruola\",\n        \"costo\": 21,\n        \"datainserimento\": \"2020-03-03\",\n        \"id\": 3271\n    },\n    {\n        \"ragionesociale\": \"La Casseruola\",\n        \"costo\": 21,\n        \"datainserimento\": \"2020-03-03\",\n        \"id\": 3272\n    },\n    {\n        \"ragionesociale\": \"Piedigrotta 2\",\n        \"costo\": 34,\n        \"datainserimento\": \"2020-03-04\",\n        \"id\": 3275\n    },\n    {\n        \"ragionesociale\": \"La Casseruola\",\n        \"costo\": 21,\n        \"datainserimento\": \"2020-03-05\",\n        \"id\": 3276\n    },\n    {\n        \"ragionesociale\": \"14 vic\",\n        \"costo\": 26,\n        \"datainserimento\": \"2020-10-16\",\n        \"id\": 3570\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 28,\n        \"datainserimento\": \"2020-11-10\",\n        \"id\": 3594\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 28,\n        \"datainserimento\": \"2020-11-10\",\n        \"id\": 3595\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 31,\n        \"datainserimento\": \"2020-11-10\",\n        \"id\": 3596\n    },\n    {\n        \"ragionesociale\": \"mas mexico\",\n        \"costo\": 28,\n        \"datainserimento\": \"2020-11-10\",\n        \"id\": 3597\n    },\n    {\n        \"ragionesociale\": \"coop \",\n        \"costo\": 13,\n        \"datainserimento\": \"2020-11-10\",\n        \"id\": 3598\n    },\n    {\n        \"ragionesociale\": \"coop \",\n        \"costo\": 20,\n        \"datainserimento\": \"2020-11-10\",\n        \"id\": 3599\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 28,\n        \"datainserimento\": \"2020-11-17\",\n        \"id\": 3601\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 28,\n        \"datainserimento\": \"2020-11-17\",\n        \"id\": 3602\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 28,\n        \"datainserimento\": \"2021-01-15\",\n        \"id\": 3647\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 26,\n        \"datainserimento\": \"2021-01-15\",\n        \"id\": 3648\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 28,\n        \"datainserimento\": \"2021-01-15\",\n        \"id\": 3649\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 26,\n        \"datainserimento\": \"2021-01-21\",\n        \"id\": 3650\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 52,\n        \"datainserimento\": \"2021-01-21\",\n        \"id\": 3651\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Stampa Cantiere con prezzo",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"IdCantiere\": 350,\n    \"NomeCantiere\": \"prova\",\n    \"Commessa\": \"prova\",\n    \"StatoCantiere\": \"Chiuso\",\n    \"RagioneSociale\": \"prova\",\n    \"Ricarico\": 22.4\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://172.16.50.103:8081/api/report/cantiere/print/price",
+              "protocol": "http",
+              "host": [
+                "172",
+                "16",
+                "50",
+                "103"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "report",
+                "cantiere",
+                "print",
+                "price"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Ristoranti in cantiere",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"IdCantiere\": \"2106\",\n    \"NomeCantiere\": \"prova\",\n    \"Commessa\": \"2106/2021\",\n    \"StatoCantiere\": \"Chiuso\",\n    \"RagioneSociale\": \"prova\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8081/api/report/ristoranti/caricamento",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "report",
+                    "ristoranti",
+                    "caricamento"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 26 Aug 2021 13:19:04 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"ragionesociale\": \"Piedigrotta 2\",\n        \"costo\": 14.5,\n        \"datainserimento\": \"2020-02-12\",\n        \"id\": 3249\n    },\n    {\n        \"ragionesociale\": \"La Casseruola\",\n        \"costo\": 21,\n        \"datainserimento\": \"2020-02-18\",\n        \"id\": 3251\n    },\n    {\n        \"ragionesociale\": \"A Mangiare\",\n        \"costo\": 37,\n        \"datainserimento\": \"2020-02-18\",\n        \"id\": 3252\n    },\n    {\n        \"ragionesociale\": \"La Casseruola\",\n        \"costo\": 21,\n        \"datainserimento\": \"2020-02-19\",\n        \"id\": 3253\n    },\n    {\n        \"ragionesociale\": \"Piedigrotta 2\",\n        \"costo\": 28,\n        \"datainserimento\": \"2020-02-25\",\n        \"id\": 3258\n    },\n    {\n        \"ragionesociale\": \"Piedigrotta 2\",\n        \"costo\": 30,\n        \"datainserimento\": \"2020-02-26\",\n        \"id\": 3259\n    },\n    {\n        \"ragionesociale\": \"La Casseruola\",\n        \"costo\": 21,\n        \"datainserimento\": \"2020-03-03\",\n        \"id\": 3271\n    },\n    {\n        \"ragionesociale\": \"La Casseruola\",\n        \"costo\": 21,\n        \"datainserimento\": \"2020-03-03\",\n        \"id\": 3272\n    },\n    {\n        \"ragionesociale\": \"Piedigrotta 2\",\n        \"costo\": 34,\n        \"datainserimento\": \"2020-03-04\",\n        \"id\": 3275\n    },\n    {\n        \"ragionesociale\": \"La Casseruola\",\n        \"costo\": 21,\n        \"datainserimento\": \"2020-03-05\",\n        \"id\": 3276\n    },\n    {\n        \"ragionesociale\": \"14 vic\",\n        \"costo\": 26,\n        \"datainserimento\": \"2020-10-16\",\n        \"id\": 3570\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 28,\n        \"datainserimento\": \"2020-11-10\",\n        \"id\": 3594\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 28,\n        \"datainserimento\": \"2020-11-10\",\n        \"id\": 3595\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 31,\n        \"datainserimento\": \"2020-11-10\",\n        \"id\": 3596\n    },\n    {\n        \"ragionesociale\": \"mas mexico\",\n        \"costo\": 28,\n        \"datainserimento\": \"2020-11-10\",\n        \"id\": 3597\n    },\n    {\n        \"ragionesociale\": \"coop \",\n        \"costo\": 13,\n        \"datainserimento\": \"2020-11-10\",\n        \"id\": 3598\n    },\n    {\n        \"ragionesociale\": \"coop \",\n        \"costo\": 20,\n        \"datainserimento\": \"2020-11-10\",\n        \"id\": 3599\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 28,\n        \"datainserimento\": \"2020-11-17\",\n        \"id\": 3601\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 28,\n        \"datainserimento\": \"2020-11-17\",\n        \"id\": 3602\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 28,\n        \"datainserimento\": \"2021-01-15\",\n        \"id\": 3647\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 26,\n        \"datainserimento\": \"2021-01-15\",\n        \"id\": 3648\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 28,\n        \"datainserimento\": \"2021-01-15\",\n        \"id\": 3649\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 26,\n        \"datainserimento\": \"2021-01-21\",\n        \"id\": 3650\n    },\n    {\n        \"ragionesociale\": \"le rotte\",\n        \"costo\": 52,\n        \"datainserimento\": \"2021-01-21\",\n        \"id\": 3651\n    }\n]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Impianti",
+      "item": [
+        {
+          "name": "Nuovo Impianto",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"IdUtente\": 2,\n    \"IdCliente\": 6,\n    \"IdTipologia\": 3\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8989/impianto/nuovo",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "impianto",
+                "nuovo"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Nuovo Impianto",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"IdUtente\": 2,\n    \"IdCliente\": 6,\n    \"IdTipologia\": 3\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8989/impianto/nuovo",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8989",
+                  "path": [
+                    "impianto",
+                    "nuovo"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "12"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"c-70pssSei6J51Ep4WZr/y3S0SRCA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 06 Dec 2021 07:50:22 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"return\": 4\n}"
+            }
+          ]
+        },
+        {
+          "name": "Ricerca impianti",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8989/impianto/ricerca",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "impianto",
+                "ricerca"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Ricerca impianti",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8989/impianto/ricerca",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8989",
+                  "path": [
+                    "impianto",
+                    "ricerca"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "361"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"169-2I/rseLiuHazC2QO1Pwr9doEsRQ\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 06 Dec 2021 08:11:55 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"IdImpianto\": 2,\n        \"nomeTipologia\": \"Bus\",\n        \"RagioneSociale\": \"Cliente di Prova\",\n        \"DataInserimento\": \"2021-12-06T07:49:33.330Z\"\n    },\n    {\n        \"IdImpianto\": 3,\n        \"nomeTipologia\": \"Bus\",\n        \"RagioneSociale\": \"Cliente di Prova\",\n        \"DataInserimento\": \"2021-12-06T07:50:19.480Z\"\n    },\n    {\n        \"IdImpianto\": 4,\n        \"nomeTipologia\": \"Bus\",\n        \"RagioneSociale\": \"Cliente di Prova\",\n        \"DataInserimento\": \"2021-12-06T07:50:23.033Z\"\n    }\n]"
+            },
+            {
+              "name": "Ricerca impianti",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8989/impianto/ricerca",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8989",
+                  "path": [
+                    "impianto",
+                    "ricerca"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1748"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"6d4-Z0heqeFC4BkctthCUQ8NEFLfZUE\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 07 Dec 2021 08:31:19 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"IdImpianto\": 2,\n        \"nomeTipologia\": \"Bus\",\n        \"RagioneSociale\": \"Cliente di Prova\",\n        \"DataInserimento\": \"2021-12-06T07:49:33.330Z\",\n        \"Utente\": \"Paolo Pirani\"\n    },\n    {\n        \"IdImpianto\": 3,\n        \"nomeTipologia\": \"Bus\",\n        \"RagioneSociale\": \"Cliente di Prova\",\n        \"DataInserimento\": \"2021-12-06T07:50:19.480Z\",\n        \"Utente\": \"Paolo Pirani\"\n    },\n    {\n        \"IdImpianto\": 4,\n        \"nomeTipologia\": \"Bus\",\n        \"RagioneSociale\": \"Cliente di Prova\",\n        \"DataInserimento\": \"2021-12-06T07:50:23.033Z\",\n        \"Utente\": \"Paolo Pirani\"\n    },\n    {\n        \"IdImpianto\": 5,\n        \"nomeTipologia\": \"Bus\",\n        \"RagioneSociale\": \"Cliente di Prova\",\n        \"DataInserimento\": \"2021-12-07T07:05:12.893Z\",\n        \"Utente\": \"Paolo Pirani\"\n    },\n    {\n        \"IdImpianto\": 6,\n        \"nomeTipologia\": \"Elettrico\",\n        \"RagioneSociale\": \"Megabyte di Alessandro Gennari\",\n        \"DataInserimento\": \"2021-12-07T07:11:05.243Z\",\n        \"Utente\": \"Paolo Pirani\"\n    },\n    {\n        \"IdImpianto\": 7,\n        \"nomeTipologia\": \"Antintrusione\",\n        \"RagioneSociale\": \"Megabyte di Alessandro Gennari\",\n        \"DataInserimento\": \"2021-12-07T07:11:52.460Z\",\n        \"Utente\": \"Paolo Pirani\"\n    },\n    {\n        \"IdImpianto\": 8,\n        \"nomeTipologia\": \"Antintrusione\",\n        \"RagioneSociale\": \"Megabyte di Alessandro Gennari\",\n        \"DataInserimento\": \"2021-12-07T07:12:44.690Z\",\n        \"Utente\": \"Paolo Pirani\"\n    },\n    {\n        \"IdImpianto\": 9,\n        \"nomeTipologia\": \"Antintrusione\",\n        \"RagioneSociale\": \"Megabyte di Alessandro Gennari\",\n        \"DataInserimento\": \"2021-12-07T07:13:29.980Z\",\n        \"Utente\": \"Paolo Pirani\"\n    },\n    {\n        \"IdImpianto\": 10,\n        \"nomeTipologia\": \"Antintrusione\",\n        \"RagioneSociale\": \"Megabyte di Alessandro Gennari\",\n        \"DataInserimento\": \"2021-12-07T07:14:29.463Z\",\n        \"Utente\": \"Paolo Pirani\"\n    },\n    {\n        \"IdImpianto\": 11,\n        \"nomeTipologia\": \"Antintrusione\",\n        \"RagioneSociale\": \"Megabyte di Alessandro Gennari\",\n        \"DataInserimento\": \"2021-12-07T07:15:12.490Z\",\n        \"Utente\": \"Paolo Pirani\"\n    },\n    {\n        \"IdImpianto\": 12,\n        \"nomeTipologia\": \"Elettrico\",\n        \"RagioneSociale\": \"Megabyte di Alessandro Gennari\",\n        \"DataInserimento\": \"2021-12-07T07:15:38.720Z\",\n        \"Utente\": \"Paolo Pirani\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Inserimento nota impianto",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"IdImpianto\": 6,\n    \"IdUtente\": 4,\n    \"testo\": \"prova\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8989/impianto/nota/nuovo",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "impianto",
+                "nota",
+                "nuovo"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Inserimento nota impianto",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"IdImpianto\": 6,\n    \"IdUtente\": 4,\n    \"testo\": \"prova\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8989/impianto/nota/nuovo",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8989",
+                  "path": [
+                    "impianto",
+                    "nota",
+                    "nuovo"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "15"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"f-87GUtLDqjisQ1QRvuBHGXYMbNbc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 07 Dec 2021 08:31:01 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"return\": true\n}"
+            }
+          ]
+        },
+        {
+          "name": "caricamento note impianto",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"IdImpianto\": 6\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8989/impianto/note/caricamento",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "impianto",
+                "note",
+                "caricamento"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "caricamento note impianto",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"IdImpianto\": 6\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8989/impianto/note/caricamento",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8989",
+                  "path": [
+                    "impianto",
+                    "note",
+                    "caricamento"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "169"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"a9-JqMJFUe21Qfe9O4nGb5ZVsPg7BI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 07 Dec 2021 08:31:03 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"IdNoteimpianto\": 1,\n        \"Testo\": \"prova\",\n        \"Data\": \"07-12-2021\",\n        \"Utente\": \"Laura Tassinari\"\n    },\n    {\n        \"IdNoteimpianto\": 2,\n        \"Testo\": \"prova\",\n        \"Data\": \"07-12-2021\",\n        \"Utente\": \"Laura Tassinari\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Caricamento documenti impianto",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"IdImpianto\": 12\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8989/impianto/documenti/carica",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "impianto",
+                "documenti",
+                "carica"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get file",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Inserimento nuova assistenza da remoto",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Check assistenza aperta",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Produttori",
+      "item": [
+        {
+          "name": "Caricamento Produttori",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"IdFornitore\":1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8989/produttore/caricamento",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "produttore",
+                "caricamento"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Caricamento Produttori",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"IdFornitore\":1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8989/produttore/caricamento",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8989",
+                  "path": [
+                    "produttore",
+                    "caricamento"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,OPTIONS,POST,PUT"
+                },
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "119"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"77-yPQP0FKKI5nl2oAgLUw/01l5Pps\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 24 Feb 2022 10:56:57 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"IdProduttore\": 2,\n        \"IdFornitore\": 1,\n        \"FamigliaDiSconto\": \"prova\",\n        \"Sconto1\": 22,\n        \"Sconto2\": 23,\n        \"Sconto3\": 23,\n        \"CodMarca\": \"ABB\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Inserimento Produttore",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"FamigliaDiSconto\": \"prova\",\n    \"Sconto1\": 22,\n    \"Sconto2\": 23,\n    \"Sconto3\": 23,\n    \"IdUtente\": 2,\n    \"IdFornitore\": 1,\n    \"CodMarca\": \"ABB\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8989/produttore/add",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8989",
+              "path": [
+                "produttore",
+                "add"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Inserimento Produttore",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"FamigliaDiSconto\": \"prova\",\n    \"Sconto1\": 22,\n    \"Sconto2\": 23,\n    \"Sconto3\": 23,\n    \"IdUtente\": 2,\n    \"IdFornitore\": 1,\n    \"CodMarca\": \"ABB\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8989/produttore/add",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8989",
+                  "path": [
+                    "produttore",
+                    "add"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,OPTIONS,POST,PUT"
+                },
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "17"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"11-EQ8JY7iSzX8UPwNOf0AGczfINp8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 24 Feb 2022 10:56:19 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"return\": \"true\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Importazione listini",
+      "item": [
+        {
+          "name": "Stato importazione listini",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/importazione/status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "importazione",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Distinta",
+      "item": [
+        {
+          "name": "Caricamento articoli presenti dentro distinta",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": [
+            {
+              "name": "Caricamento articoli presenti dentro distinta",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://127.0.0.1:8989/distinta/carica/componenti?CodiceDistinta=22",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8989",
+                  "path": [
+                    "distinta",
+                    "carica",
+                    "componenti"
+                  ],
+                  "query": [
+                    {
+                      "key": "CodiceDistinta",
+                      "value": "22"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,OPTIONS,POST,PUT"
+                },
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1590"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"636-Kxmir1173+DGEEqvNQ7QjZ5nMRE\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 21 Mar 2022 08:55:28 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"IdDistintaSemplice\": 31,\n        \"IdArticolo\": 152,\n        \"TipoArticolo\": \"M\",\n        \"Fornitore\": \"Cento Impianti S.r.l.\",\n        \"DataAggiornamento\": \"20-01-2021\",\n        \"CodArt\": \"MANODOPERA 3\",\n        \"Prezzo\": 20.5,\n        \"Totale\": 6.15,\n        \"Divisore\": 60,\n        \"Quantita\": 18\n    },\n    {\n        \"IdDistintaSemplice\": 32,\n        \"IdArticolo\": 211,\n        \"TipoArticolo\": \"M\",\n        \"Fornitore\": \"Cento Impianti S.r.l.\",\n        \"DataAggiornamento\": \"20-01-2021\",\n        \"CodArt\": \"MANODOPERA 5\",\n        \"Prezzo\": 21.9,\n        \"Totale\": 6.569999999999999,\n        \"Divisore\": 60,\n        \"Quantita\": 18\n    },\n    {\n        \"IdDistintaSemplice\": 138,\n        \"IdArticolo\": 263484,\n        \"TipoArticolo\": \"A\",\n        \"Fornitore\": \"COMET\",\n        \"DataAggiornamento\": \"14-03-2022\",\n        \"CodArt\": \"16713\",\n        \"Prezzo\": 1.24,\n        \"Totale\": 1.24,\n        \"Divisore\": 1,\n        \"Quantita\": 1\n    },\n    {\n        \"IdDistintaSemplice\": 139,\n        \"IdArticolo\": 263633,\n        \"TipoArticolo\": \"A\",\n        \"Fornitore\": \"COMET\",\n        \"DataAggiornamento\": \"14-03-2022\",\n        \"CodArt\": \"16763.15\",\n        \"Prezzo\": 3.63,\n        \"Totale\": 3.63,\n        \"Divisore\": 1,\n        \"Quantita\": 1\n    },\n    {\n        \"IdDistintaSemplice\": 140,\n        \"IdArticolo\": 263442,\n        \"TipoArticolo\": \"A\",\n        \"Fornitore\": \"COMET\",\n        \"DataAggiornamento\": \"14-03-2022\",\n        \"CodArt\": \"16542\",\n        \"Prezzo\": 1.07,\n        \"Totale\": 2.14,\n        \"Divisore\": 1,\n        \"Quantita\": 2\n    },\n    {\n        \"IdDistintaSemplice\": 281,\n        \"IdArticolo\": 263318,\n        \"TipoArticolo\": \"A\",\n        \"Fornitore\": \"COMET\",\n        \"DataAggiornamento\": \"14-03-2022\",\n        \"CodArt\": \"16331\",\n        \"Prezzo\": 8.72,\n        \"Totale\": 8.72,\n        \"Divisore\": 1,\n        \"Quantita\": 1\n    },\n    {\n        \"IdDistintaSemplice\": 142,\n        \"IdArticolo\": 265868,\n        \"TipoArticolo\": \"A\",\n        \"Fornitore\": \"COMET\",\n        \"DataAggiornamento\": \"14-03-2022\",\n        \"CodArt\": \"V71303\",\n        \"Prezzo\": 0.24,\n        \"Totale\": 0.24,\n        \"Divisore\": 1,\n        \"Quantita\": 1\n    },\n    {\n        \"IdDistintaSemplice\": 143,\n        \"IdArticolo\": 2023884,\n        \"TipoArticolo\": \"A\",\n        \"Fornitore\": \"INS\",\n        \"DataAggiornamento\": \"13-11-2019\",\n        \"CodArt\": \"B10307          \",\n        \"Prezzo\": 0.43,\n        \"Totale\": 4.3,\n        \"Divisore\": 1,\n        \"Quantita\": 10\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Caricamento sotto distinte",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": [
+            {
+              "name": "Caricamento sotto distinte",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://127.0.0.1:8989/distinta/carica/sottodistinte?CodiceDistinta=513",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8989",
+                  "path": [
+                    "distinta",
+                    "carica",
+                    "sottodistinte"
+                  ],
+                  "query": [
+                    {
+                      "key": "CodiceDistinta",
+                      "value": "513"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,HEAD,OPTIONS,POST,PUT"
+                },
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "177"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"b1-zB3MzdRRMHWXxgG9E98GF7LC6Ng\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 21 Mar 2022 09:37:58 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"CodiceDistinta\": 513,\n        \"IdSottoDistinta\": 2,\n        \"Quantita\": 14.25,\n        \"IdDistinta\": \"Boccta-gn200x60w\",\n        \"Descrizione\": \"Canale tipo ta-gn 200x60 con 1 separatore\",\n        \"CodiceSottoDistinta\": 512\n    }\n]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Preventivo",
+      "item": [
+        {
+          "name": "Stampa preventivo completo",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/preventivo/report/completo?idPreventivo=2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "preventivo",
+                "report",
+                "completo"
+              ],
+              "query": [
+                {
+                  "key": "idPreventivo",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Stampa preventivo completo",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8081/api/preventivo/report/completo?idPreventivo=2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "preventivo",
+                    "report",
+                    "completo"
+                  ],
+                  "query": [
+                    {
+                      "key": "idPreventivo",
+                      "value": "2"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 06 Apr 2022 09:21:16 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"idPreventivo\": 2,\n    \"idCliente\": null,\n    \"vostroRiferimento\": null,\n    \"riferimentoInterno\": null,\n    \"stato\": null,\n    \"modalitaCalcoloPercentuale\": null,\n    \"prezzoRiservato\": 0,\n    \"percentualeSpeseGenerali\": 0,\n    \"percentualeUtile\": 0,\n    \"percentualeMargine\": 0,\n    \"testata\": null,\n    \"chiusura\": null,\n    \"oggetto\": null\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

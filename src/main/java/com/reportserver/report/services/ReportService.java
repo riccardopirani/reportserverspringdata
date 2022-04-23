@@ -1,5 +1,6 @@
 package com.reportserver.report.services;
 
+import com.reportserver.report.utils.Support;
 import net.sf.jasperreports.engine.JREmptyDataSource;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -30,24 +31,23 @@ public class ReportService {
      *
      * @param targetStream - target report stream
      * @param parameters   - generated parameters
-     * @param filename   - file name on file system
+     * @param filename     - file name on file system
      * @return byte array resource (file content)
      */
-    public static ByteArrayResource exportReportToPDF(InputStream targetStream, Map<String, Object> parameters,String filename) {
+    public static ByteArrayResource exportReportToPDF(InputStream targetStream, Map<String, Object> parameters, String filename) {
         try {
-            System.out.println("Sono nell'export del pdf");
             JasperPrint jasperPrint = JasperFillManager.fillReport(targetStream, parameters, new JREmptyDataSource());
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             JasperExportManager.exportReportToPdfStream(jasperPrint, outputStream);
-            JasperExportManager.exportReportToPdfStream(jasperPrint, new FileOutputStream("/var/tmp/"+filename+".pdf"));
+            JasperExportManager.exportReportToPdfStream(jasperPrint, new FileOutputStream(Support.tempPath + "/" + filename + ".pdf"));
             byte[] reportContent = outputStream.toByteArray();
             return new ByteArrayResource(reportContent);
         } catch (Exception e) {
-            System.out.println("Errrore export log: "+e);
             LOGGER.error("Exporting report to PDF error: {}", e.getMessage());
             return null;
         }
     }
+
     /**
      * Method for exporting report to DOCx format
      *
@@ -57,12 +57,11 @@ public class ReportService {
      */
     public static ByteArrayResource exportReportToDOCx(InputStream targetStream, Map<String, Object> parameters) {
         try {
-            System.out.println("Sto esportando il docx");
             JasperPrint jasperPrint = JasperFillManager.fillReport(targetStream, parameters, new JREmptyDataSource());
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             JRDocxExporter exporter = new JRDocxExporter();
             exporter.setExporterInput(new SimpleExporterInput(jasperPrint));
-            exporter.setExporterOutput(new SimpleOutputStreamExporterOutput(new File("/var/tmp/report.docx")));
+            exporter.setExporterOutput(new SimpleOutputStreamExporterOutput(new File(Support.tempPath + "/report.docx")));
             exporter.setExporterOutput(new SimpleOutputStreamExporterOutput(outputStream));
             exporter.exportReport();
             byte[] reportContent = outputStream.toByteArray();

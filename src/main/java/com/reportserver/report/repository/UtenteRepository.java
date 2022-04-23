@@ -5,9 +5,17 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+/**
+ * Repo Utente
+ */
 public interface UtenteRepository extends JpaRepository<Utente, Integer> {
 
-    //Permette il caricamento dei dati dell'utente
+    /**
+     * Caricamento dati utente
+     *
+     * @param IdUtente
+     * @return
+     */
     @Query("FROM Utente where IdUtente=:IdUtente")
     Utente findbyIdUtente(@Param("IdUtente") int IdUtente);
 }

@@ -16,6 +16,9 @@ public class SpeseSostenute implements Serializable {
 
     @Column(name = "Costo")
     private Double costo;
+    @Temporal(TemporalType.DATE)
+    @Column(name = "Data")
+    private Date Data;
 
     public int getIdSpeseSostenute() {
         return IdSpeseSostenute;
@@ -48,10 +51,6 @@ public class SpeseSostenute implements Serializable {
     public void setData(Date data) {
         Data = data;
     }
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "Data")
-    private Date Data;
 
 
 }

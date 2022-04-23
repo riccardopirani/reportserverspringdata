@@ -7,13 +7,27 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
+/**
+ * Repo RisorseUmane
+ */
 public interface RisorseUmaneRepository extends JpaRepository<RisorseUmane, Integer> {
 
-    //All the risorse umane present on site are loaded
+    /**
+     * Caricamento risorse umane
+     *
+     * @param IdCantiere
+     * @return
+     */
     @Query("FROM RisorseUmane where IdCantiere=:IdCantiere")
     List<RisorseUmane> findbycantiere(@Param("IdCantiere") int IdCantiere);
 
-    //Calcolo totale ore
-    @Query(value = " Select  ((REPLACE((left(CAST(REPLACE((convert(varchar(5), Cast(convert(varchar(5), (RisorseUmane.OreFine - RisorseUmane.OreInizio), 108) as datetime) - CAST(REPLACE(RisorseUmane.Pausa, '.', ':') as datetime), 108)),':',',')AS money)/100, 2) ),'.',''))+(((CAST('0,'+(RIGHT(CAST(REPLACE((convert(varchar(5), Cast(convert(varchar(5), (RisorseUmane.OreFine - RisorseUmane.OreInizio), 108) as datetime) - CAST(REPLACE(RisorseUmane.Pausa, '.', ':') as datetime), 108)),':',',')AS money)/100, 2) ) as money)/100)*100)/60)) as Quantita from RisorseUmane inner join Utente  on RisorseUmane.IdUtente = Utente.IdUtente  where RisorseUmane.IdCantiere=:IdCantiere and RisorseUmane.IdUtente=:IdUtente", nativeQuery = true)
+    /**
+     * Calcolo ore utente presente in un cantiere
+     *
+     * @param IdCantiere
+     * @param IdUtente
+     * @return
+     */
+    @Query(value = "Select  SUM(((REPLACE((left(CAST(REPLACE((convert(varchar(5), Cast(convert(varchar(5), (RisorseUmane.OreFine - RisorseUmane.OreInizio), 108) as datetime) - CAST(REPLACE(RisorseUmane.Pausa, '.', ':') as datetime), 108)),':',',')AS money)/100, 2) ),'.',''))+(((CAST('0,'+(RIGHT(CAST(REPLACE((convert(varchar(5), Cast(convert(varchar(5), (RisorseUmane.OreFine - RisorseUmane.OreInizio), 108) as datetime) - CAST(REPLACE(RisorseUmane.Pausa, '.', ':') as datetime), 108)),':',',')AS money)/100, 2) ) as money)/100)*100)/60))) as Quantita from RisorseUmane inner join Utente  on RisorseUmane.IdUtente = Utente.IdUtente  where RisorseUmane.IdCantiere=:IdCantiere and RisorseUmane.IdUtente=:IdUtente", nativeQuery = true)
     String gettotaleore(@Param("IdCantiere") int IdCantiere, @Param("IdUtente") int IdUtente);
 }

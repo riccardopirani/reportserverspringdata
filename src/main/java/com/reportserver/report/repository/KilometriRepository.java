@@ -7,9 +7,16 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
+/**
+ * Repo Kilometri
+ */
 public interface KilometriRepository extends JpaRepository<Kilometri, Integer> {
-
-    //All the kilometri present on site are loaded
+    /**
+     * Caricamento kilometri da cantiere
+     *
+     * @param IdCantiere
+     * @return
+     */
     @Query("FROM Kilometri where IdCantiere=:IdCantiere")
     List<Kilometri> findbycantiere(@Param("IdCantiere") int IdCantiere);
 }

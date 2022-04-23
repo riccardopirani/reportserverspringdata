@@ -7,9 +7,17 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
+/**
+ * Repo Noleggio
+ */
 public interface NoleggioRepository extends JpaRepository<Noleggio, Integer> {
 
-    //Permette il caricamento dei rapportini presenti in un cantiere
+    /**
+     * Caricamento noleggi da cantiere
+     *
+     * @param IdCantiere
+     * @return
+     */
     @Query("FROM Noleggio where IdCantiere=:IdCantiere")
     List<Noleggio> findbycantiere(@Param("IdCantiere") int IdCantiere);
 }

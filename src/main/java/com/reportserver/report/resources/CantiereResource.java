@@ -57,9 +57,7 @@ public class CantiereResource {
      */
     @PostMapping(value = "/print/price", consumes = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody
-    ResponseEntity<Object> printprice(HttpServletResponse response, @Valid @RequestBody CantierePrezzo cantiere,@RequestParam(required=true,defaultValue="false") Boolean isPrice, @RequestParam(required=true,defaultValue="false") Boolean printArticoli,@RequestParam(required=true,defaultValue="false") Boolean printRistoranti,@RequestParam(required=true,defaultValue="false") Boolean printSpese,@RequestParam(required=true,defaultValue="false") Boolean printNoleggi,@RequestParam(required=true,defaultValue="false") Boolean printRisorse,@RequestParam(required=true,defaultValue="false") Boolean printKilometri,@RequestParam(required=true,defaultValue="false") Boolean printDiritto,@RequestParam(required=true,defaultValue="false") Boolean isCostoUnicoRisorsa,@RequestParam(required=true,defaultValue="0") double prezzounicorisorsa) throws JSONException, IOException {
-        System.out.println("Stampa risorse: "
-        +printRisorse);
+    ResponseEntity<Object> printprice(HttpServletResponse response, @Valid @RequestBody CantierePrezzo cantiere, @RequestParam(required = true, defaultValue = "false") Boolean isPrice, @RequestParam(required = true, defaultValue = "false") Boolean printArticoli, @RequestParam(required = true, defaultValue = "false") Boolean printRistoranti, @RequestParam(required = true, defaultValue = "false") Boolean printSpese, @RequestParam(required = true, defaultValue = "false") Boolean printNoleggi, @RequestParam(required = true, defaultValue = "false") Boolean printRisorse, @RequestParam(required = true, defaultValue = "false") Boolean printKilometri, @RequestParam(required = true, defaultValue = "false") Boolean printDiritto, @RequestParam(required = true, defaultValue = "false") Boolean isCostoUnicoRisorsa, @RequestParam(required = true, defaultValue = "0") double prezzounicorisorsa) throws JSONException, IOException {
         Cantiere c = new Cantiere();
         c.setIdCantiere(cantiere.IdCantiere);
         c.setNomeCantiere(cantiere.NomeCantiere);
@@ -69,9 +67,7 @@ public class CantiereResource {
         c.setStatoCantiere(cantiere.StatoCantiere);
 
         try {
-            Boolean check;
-            check = cservice.generateReport(c, isPrice, cantiere.Ricarico, printArticoli,printRistoranti,printSpese,printNoleggi,printRisorse,printKilometri,printDiritto,isCostoUnicoRisorsa,prezzounicorisorsa);
-
+            Boolean check = cservice.generateReport(c, isPrice, cantiere.Ricarico, printArticoli, printRistoranti, printSpese, printNoleggi, printRisorse, printKilometri, printDiritto, isCostoUnicoRisorsa, prezzounicorisorsa);
             return new ResponseEntity<>(check, HttpStatus.OK);
         } catch (Exception ex) {
             return new ResponseEntity<>("Invalid Ricarico", HttpStatus.BAD_REQUEST);

@@ -6,11 +6,10 @@ import java.io.Serializable;
 
 @Description(value = "Table Note Report Model")
 public class TableReportNote implements Serializable {
-
     public String note;
 
-    public TableReportNote(String note){
-        this.note=note;
+    public TableReportNote(String note) {
+        this.note = note;
     }
 
     public String getNote() {
@@ -20,5 +19,4 @@ public class TableReportNote implements Serializable {
     public void setNote(String note) {
         this.note = note;
     }
-
 }

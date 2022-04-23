@@ -1,54 +1,70 @@
 package com.reportserver.report.utils;
 
-import net.glxn.qrgen.javase.QRCode;
+import org.springframework.web.multipart.MultipartFile;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.text.DecimalFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Date;
 
+/**
+ * Classe di Support in Java
+ */
 public class Support {
 
-    //Round 2 decimal
+    public static String tempPath = "/var/tmp";
+
+    /**
+     * Arrotondamento del valori a 2 decimali
+     *
+     * @param value
+     * @return
+     */
     public static double rounddouble2decimal(double value) {
-        DecimalFormat df = new DecimalFormat("#.##");
-        double risvalue = Double.valueOf(df.format(value));
-        return risvalue;
+        return Double.valueOf(new DecimalFormat("#.##").format(value));
     }
 
-    //Ricarico percentuale
+    /**
+     * Funzione che si occupa di applicare il ricarico percentuale
+     *
+     * @param percentuale
+     * @param valore
+     * @return
+     */
     public static double rechargepercentage(double percentuale, double valore) {
         return ((percentuale * valore) / 100) + valore;
     }
 
-    //Generazione QRCode
-    public static BufferedImage generateQRCodeImage(String barcodeText) throws Exception {
-        ByteArrayOutputStream stream = QRCode
-                .from(barcodeText)
-                .withSize(250, 250)
-                .stream();
-        ByteArrayInputStream bis = new ByteArrayInputStream(stream.toByteArray());
-
-        return ImageIO.read(bis);
+    /**
+     * Funzione che si occupa di eliminare un file da una cartella temporanea
+     *
+     * @param file
+     * @return
+     */
+    public static Boolean deleteLocalFile(MultipartFile file) {
+        try {
+            File myObj = new File(Support.tempPath + "/" + file.getOriginalFilename());
+            if (myObj.exists() && !myObj.isDirectory()) {
+                if (myObj.delete()) {
+                    System.out.println("Deleted the file: " + myObj.getName());
+                    return true;
+                } else {
+                    System.out.println("Failed to delete the file.");
+                    return false;
+                }
+            } else {
+                return true;
+            }
+        } catch (Exception ex) {
+            return false;
+        }
     }
 
-    //Difference between hour
-    public static String differencehour(String oreinizio, String orefine) throws ParseException {
-        SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
-        Date date1 = format.parse(oreinizio);
-        Date date2 = format.parse(orefine);
-        long difference = date2.getTime() - date1.getTime();
-        int minutes = (int) ((difference / (1000 * 60)) % 60);
-        int hours = (int) ((difference / (1000 * 60 * 60)) % 24);
-        return "" + hours + ":" + minutes;
-    }
-
-    //Convert data to string day of week
+    /**
+     * Conversione di una giornata da inglese ad italiano esempio Monday->Lunedi
+     *
+     * @param now
+     * @return
+     */
     public static String convertDataToString(String now) {
         try {
             LocalDate theDate = LocalDate.parse(now);

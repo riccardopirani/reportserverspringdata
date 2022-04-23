@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Description;
 import java.io.Serializable;
 
 
-
 @Description(value = "Table Cantiere Report Model")
 public class TableReport implements Serializable {
 
@@ -18,6 +17,7 @@ public class TableReport implements Serializable {
     public String prezzo;
     public String nr;
     public String totale;
+
 
     public TableReport(String NR, String Tipo, String data, String GG, String Articolo, String Prezzo, String Descrizione, String Totale, String Quantita) {
         this.Tipo = Tipo;

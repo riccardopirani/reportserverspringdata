@@ -7,9 +7,17 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
+/**
+ * Repo note
+ */
 public interface NoteimpiantoRepository extends JpaRepository<Noteimpianto, Integer> {
 
-    //Carico le note presenti nell'impianto
+    /**
+     * Caricamento note impianto
+     *
+     * @param IdImpianto
+     * @return
+     */
     @Query("FROM Noteimpianto where IdImpianto=:IdImpianto")
     List<Noteimpianto> findbyIdImpianto(@Param("IdImpianto") int IdImpianto);
 }

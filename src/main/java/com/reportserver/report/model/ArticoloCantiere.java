@@ -56,7 +56,6 @@ public class ArticoloCantiere implements Serializable {
         this.codart = codart;
     }
 
-
     public double getQuantita() {
         return quantita;
     }
@@ -73,7 +72,6 @@ public class ArticoloCantiere implements Serializable {
         this.prezzo = prezzo;
     }
 
-
     public Date getData() {
         return Data;
     }
@@ -81,6 +79,5 @@ public class ArticoloCantiere implements Serializable {
     public void setData(Date data) {
         Data = data;
     }
-
 
 }

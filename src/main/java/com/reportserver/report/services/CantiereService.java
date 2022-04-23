@@ -13,6 +13,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Service che si occupa di fornire le api per il cantiere
+ */
 @Service
 public class CantiereService {
 
@@ -59,7 +62,7 @@ public class CantiereService {
             List<Kilometri> kilometri = repoKilometri.findbycantiere(c.getIdCantiere());
             List<Noleggio> noleggi = repoNoleggi.findbycantiere(c.getIdCantiere());
             List<SpeseSostenute> spese = repospese.findbycantiere(c.getIdCantiere());
-            double totaleristoranti = 0, totalenoleggi = 0, totalekiometri = 0, totalespesesostenute = 0, totalearticoli = 0, totalerisorse = 0;
+            double totaleristoranti = 0, totalenoleggi = 0, totalekiometri = 0, totalespesesostenute = 0, totalearticoli = 0, totalerisorse = 0, totalerisorseore = 0;
             String totaleore = "0";
             try {
                 ctemp = repocliente.findbyIdCliente(c.getIdCliente());
@@ -67,7 +70,7 @@ public class CantiereService {
                 System.out.println("Not defined");
             }
             TableReport tp;
-            if(printRistoranti) {
+            if (printRistoranti) {
                 //Insert value of ristoranti into tale tablevalues
                 for (int i = 0; i < ristoranti.size(); i++) {
 
@@ -87,7 +90,7 @@ public class CantiereService {
                 }
             }
 
-            if(printSpese){
+            if (printSpese) {
                 for (int i = 0; i < spese.size(); i++) {
 
                     if (isPrice) {
@@ -125,36 +128,42 @@ public class CantiereService {
                     tablevalues.add(tp);
                 }
             }
-            if(printRisorse) {
+            if (printRisorse) {
                 try {
                     //Inset value of risorse umane into tablevalues
                     for (int i = 0; i < risorsecantiere.size(); i++) {
-                        Utente utemp = repoutente.findbyIdUtente(risorsecantiere.get(i).getIdutente());
-                        totaleore = repoRisorse.gettotaleore(c.IdCantiere, utemp.getIdutente());
-                        double orecast = Double.parseDouble(totaleore);
-                        totaleore = totaleore.replace(".", ":");
-                        totaleore = totaleore.substring(0, totaleore.length() - 2);
-                        if (isPrice) {
+                        try {
+                            Utente utemp = repoutente.findbyIdUtente(risorsecantiere.get(i).getIdutente());
+                            totaleore = repoRisorse.gettotaleore(c.IdCantiere, utemp.getIdutente());
+                            double orecast = Double.parseDouble(totaleore);
+                            totaleore = totaleore.replace(".", ":");
+                            totaleore = totaleore.substring(0, totaleore.length() - 2);
+                            if (isPrice) {
+                                if (isCostoUnicoRisorsa) {
+                                    tp = new TableReport("", "R", risorsecantiere.get(i).getData().toString(), Support.convertDataToString(risorsecantiere.get(i).getData().toString()), utemp.getNome() + " " + utemp.getCognome(), "" + CostoUnicoRisorsa, risorsecantiere.get(i).getDescrizione(), ""
+                                            + (orecast * CostoUnicoRisorsa), totaleore);
+                                } else {
+                                    tp = new TableReport("", "R", risorsecantiere.get(i).getData().toString(), Support.convertDataToString(risorsecantiere.get(i).getData().toString()), utemp.getNome() + " " + utemp.getCognome(), "" + utemp.getCostointerno(), risorsecantiere.get(i).getDescrizione(), ""
+                                            + (orecast * utemp.getCostointerno()), totaleore);
+                                }
 
-                            if (isCostoUnicoRisorsa) {
-                                tp = new TableReport("", "R", risorsecantiere.get(i).getData().toString(), Support.convertDataToString(risorsecantiere.get(i).getData().toString()), utemp.getNome() + " " + utemp.getCognome(), "" + CostoUnicoRisorsa, risorsecantiere.get(i).getDescrizione(), ""
-                                        + (orecast * CostoUnicoRisorsa), totaleore);
                             } else {
-                                tp = new TableReport("", "R", risorsecantiere.get(i).getData().toString(), Support.convertDataToString(risorsecantiere.get(i).getData().toString()), utemp.getNome() + " " + utemp.getCognome(), "" + utemp.getCostointerno(), risorsecantiere.get(i).getDescrizione(), ""
-                                        + (orecast * utemp.getCostointerno()), totaleore);
+                                tp = new TableReport("", "R", risorsecantiere.get(i).getData().toString(), Support.convertDataToString(risorsecantiere.get(i).getData().toString()), utemp.getNome() + " " + utemp.getCognome(), "", risorsecantiere.get(i).getDescrizione(), "", totaleore);
                             }
+                            totalerisorse = orecast * utemp.getCostointerno();
+                            totalerisorseore = totalerisorseore + orecast;
 
-                        } else {
-                            tp = new TableReport("", "R", risorsecantiere.get(i).getData().toString(), Support.convertDataToString(risorsecantiere.get(i).getData().toString()), utemp.getNome() + " " + utemp.getCognome(), "", risorsecantiere.get(i).getDescrizione(), "", totaleore);
+                            tablevalues.add(tp);
+
+                        } catch (Exception ex) {
+                            System.out.println("Errore caricamento risorse umane: " + ex.getMessage());
                         }
-                        totalerisorse = orecast * utemp.getCostointerno();
-                        tablevalues.add(tp);
                     }
                 } catch (Exception ex) {
                     System.out.println("Errore: " + ex);
                 }
             }
-            if(printKilometri) {
+            if (printKilometri) {
                 //Inset value of kilometri into tablevalues
                 for (int i = 0; i < kilometri.size(); i++) {
                     if (isPrice) {
@@ -167,7 +176,7 @@ public class CantiereService {
                     tablevalues.add(tp);
                 }
             }
-            if(printNoleggi) {
+            if (printNoleggi) {
                 //Inset value of noleggi into tablevalues
                 for (int i = 0; i < noleggi.size(); i++) {
                     if (isPrice) {
@@ -179,8 +188,6 @@ public class CantiereService {
                     tablevalues.add(tp);
                 }
             }
-
-
             ClassPathResource reportResource = new ClassPathResource("templates/printcantiere.jasper");
             Map<String, Object> reportParameters = new HashMap<>();
             JRBeanCollectionDataSource itemsJRBean = new JRBeanCollectionDataSource(tablevalues);
@@ -189,7 +196,7 @@ public class CantiereService {
             reportParameters.put("Commessa", c.getCommessa());
             reportParameters.put("NomeCantiere", c.getNomeCantiere());
             reportParameters.put("Stato", c.getStatoCantiere());
-            reportParameters.put("TotaleOreRisorsa", totaleore);
+            reportParameters.put("TotaleOreRisorsa", totalerisorseore + "" + "".replace(".", ":"));
             if (!isPrice) {
                 reportParameters.put("TotaleRisorse", "");
                 reportParameters.put("TotaleArticoli", "");
@@ -210,7 +217,7 @@ public class CantiereService {
                 reportParameters.put("TotaleCantiere", "" + (totalenoleggi + totalerisorse + totalekiometri + totaleristoranti + totalespesesostenute + totalearticoli) + " €");
             }
             reportParameters.put("CommessaCliente", "");
-            ReportService.exportReportToPDF(reportResource.getInputStream(), reportParameters,"report");
+            ReportService.exportReportToPDF(reportResource.getInputStream(), reportParameters, "report");
             ReportService.exportReportToDOCx(reportResource.getInputStream(), reportParameters);
             return true;
         } catch (Exception e) {

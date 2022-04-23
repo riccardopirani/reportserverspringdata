@@ -8,8 +8,6 @@ import javax.persistence.Table;
 @Table(name = "Rapporto")
 @Entity
 public class Rapporto {
-
-
     @Column(name = "Immagine", length = 5000)
     private String immagine;
 

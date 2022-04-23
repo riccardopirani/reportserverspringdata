@@ -53,7 +53,7 @@ class SpringFoxConfig {
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0.html")
                 .termsOfServiceUrl("https://marconisoftware.com")
                 .version("1.0.0")
-                .contact(new Contact("Riccardo Pirani", "https://www.riccardopirani.it", "riccardo@marconisoftware.com"))
+                .contact(new Contact("Riccardo Pirani", "https://marconisoftware.com", "riccardo@marconisoftware.com"))
                 .build();
     }
 }

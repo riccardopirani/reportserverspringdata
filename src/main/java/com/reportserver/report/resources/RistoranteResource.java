@@ -42,7 +42,6 @@ public class RistoranteResource {
      * @param cantiere - rappresenta il cantiere passatto come parametro al json
      * @return byte array resource (generated file in bytes)
      */
-
     @PostMapping(value = "/caricamento", consumes = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody
     ResponseEntity<Object> caricamentoristoranti(@Valid @RequestBody Cantiere cantiere) throws JSONException {

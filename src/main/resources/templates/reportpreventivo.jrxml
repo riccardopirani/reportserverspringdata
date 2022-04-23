@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="reportpreventivo" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20"
+              rightMargin="20" topMargin="20" bottomMargin="20" uuid="3c08ffac-5031-449c-a58f-007dffeebf2f">
+    <import value="org.apache.commons.codec.binary.Base64"/>
+    <subDataset name="DataSetHeader" uuid="db6131ae-8b7b-429e-aaca-42479bc8befd">
+        <parameter name="Data" class="java.lang.String">
+            <parameterDescription><![CDATA[Data del preventivo]]></parameterDescription>
+        </parameter>
+        <parameter name="NRPreventivo" class="java.lang.String"/>
+        <parameter name="NSRif" class="java.lang.String"/>
+        <parameter name="Titolo" class="java.lang.String"/>
+        <parameter name="RagioneSociale" class="java.lang.String"/>
+        <parameter name="Oggetto" class="java.lang.String"/>
+        <parameter name="Testata" class="java.lang.String"/>
+        <parameter name="LogoBase64" class="java.lang.String"/>
+        <queryString>
+            <![CDATA[]]>
+        </queryString>
+        <field name="Data" class="java.lang.String"/>
+        <field name="NSRif" class="java.lang.String"/>
+        <field name="VSRif" class="java.lang.String"/>
+        <field name="NRPreventivo" class="java.lang.String"/>
+        <field name="Titolo" class="java.lang.String"/>
+        <field name="RagioneSociale" class="java.lang.String"/>
+        <field name="Testata" class="java.lang.String"/>
+        <field name="Oggetto" class="java.lang.String"/>
+        <field name="LogoBase64" class="java.lang.String"/>
+        <variable name="Logo" class="java.lang.String"/>
+    </subDataset>
+    <parameter name="Data" class="java.lang.String"/>
+    <parameter name="NRPreventivo" class="java.lang.String"/>
+    <parameter name="NSRif" class="java.lang.String"/>
+    <parameter name="VSRif" class="java.lang.String"/>
+    <parameter name="Titolo" class="java.lang.String"/>
+    <parameter name="RagioneSociale" class="java.lang.String">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="Indirizzo" class="java.lang.String"/>
+    <parameter name="Citta" class="java.lang.String"/>
+    <parameter name="Oggetto" class="java.lang.String"/>
+    <parameter name="Testata" class="java.lang.String"/>
+    <parameter name="LogoBase64" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="79" splitType="Stretch">
+            <image scaleImage="FillFrame">
+                <reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="560"
+                               height="79" uuid="7fe6f2e0-3ba7-4424-9383-8d78bfe1cc21"/>
+                <imageExpression>
+                    <![CDATA[javax.imageio.ImageIO.read(new java.io.ByteArrayInputStream(java.util.Base64.getDecoder().decode($P{LogoBase64})))]]></imageExpression>
+            </image>
+        </band>
+    </title>
+    <columnHeader>
+        <band height="430" splitType="Stretch">
+            <staticText>
+                <reportElement x="50" y="15" width="40" height="30" uuid="801816f2-1988-4b9e-9291-88d5a200d238"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Data:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="90" y="15" width="100" height="30" uuid="29f6924b-5bd2-42f1-bd98-0090aed0d3eb"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Data}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="50" y="50" width="90" height="30" uuid="c59e786f-e907-4bcd-93f3-a14d0b777d5c"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Nr Preventivo:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="140" y="50" width="100" height="30" uuid="b0632e23-c54a-4edc-a264-23055af446a5"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{NRPreventivo}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="50" y="80" width="90" height="30" uuid="c5dbd3b3-7263-43d5-a804-1a797635fe8a"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Nf.Rif:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="140" y="80" width="100" height="30" uuid="1a11a6cc-5d1b-4994-bf10-3cc1de504d07"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{NSRif}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="50" y="110" width="90" height="30" uuid="dc708ab1-3286-479d-ad0b-aaea351652b4"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Vs.Rif:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="140" y="110" width="100" height="30" uuid="aac1e4b6-da6a-4e46-aa0f-c026896a3b86"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{VSRif}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="380" y="15" width="100" height="25" uuid="7231c72c-d715-4bbe-8906-a27173f77220"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Titolo}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="380" y="50" width="170" height="30" uuid="caf5fd23-70c3-46d3-9de0-c5765c1ec5fc"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{RagioneSociale}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="380" y="80" width="170" height="30" uuid="ec9b01f4-bcb2-495f-9a54-efc48bb452c8"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Indirizzo}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="380" y="110" width="170" height="30" uuid="9174f886-5c23-4f99-9c97-86fb50f6eeb3"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Citta}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="50" y="180" width="500" height="30" uuid="089a3b80-f7df-461b-be75-bcad575bf4e9"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Oggetto}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="50" y="220" width="500" height="210" uuid="a5a724e9-c81f-470a-8a83-9dd6bfbd823d"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Testata}]]></textFieldExpression>
+            </textField>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="125" splitType="Stretch"/>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="69" splitType="Stretch">
+            <textField>
+                <reportElement x="470" y="30" width="100" height="30" uuid="980219d2-fe09-46a6-ad45-44b5a5d955dd"/>
+                <textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>

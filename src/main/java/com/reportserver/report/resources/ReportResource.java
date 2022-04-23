@@ -31,6 +31,4 @@ public class ReportResource {
     public ReportResource(ReportService reportService) {
         this.reportService = reportService;
     }
-
-
 }

@@ -7,9 +7,16 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
+/**
+ * Repo rapporto
+ */
 public interface RapportoRepository extends JpaRepository<Rapporto, Integer> {
-
-    //Permette il caricamento dei rapportini presenti in un cantiere
+    /**
+     * Caricamento rapporti presenti in un cantiere
+     *
+     * @param IdCantiere
+     * @return
+     */
     @Query("FROM Rapporto where IdCantiere=:IdCantiere")
     List<Rapporto> findbycantiere(@Param("IdCantiere") int IdCantiere);
 }

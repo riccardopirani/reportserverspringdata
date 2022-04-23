@@ -10,6 +10,11 @@ public class Impianto {
         return IdImpianto;
     }
 
+    /**
+     * Set id impianto
+     *
+     * @param idImpianto
+     */
     public void setIdImpianto(int idImpianto) {
         IdImpianto = idImpianto;
     }

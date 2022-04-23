@@ -7,9 +7,16 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
+/**
+ * Repo SpeseSostenute
+ */
 public interface SpeseSostenuteRepository extends JpaRepository<SpeseSostenute, Integer> {
-    //Permette il caricamento della lista delle spese presenti in un cantiere
+    /**
+     * Caricamento spese presenti in un cantiere
+     *
+     * @param IdCantiere
+     * @return
+     */
     @Query("FROM SpeseSostenute where IdCantiere=:IdCantiere")
     List<SpeseSostenute> findbycantiere(@Param("IdCantiere") int IdCantiere);
-
 }
